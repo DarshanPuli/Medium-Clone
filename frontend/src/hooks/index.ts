@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export function useSpecificBlog({id}:{id:string}){
+export function useSpecificBlog({id}:{id:string|undefined}){
   const [blog, setBlog] = useState();
   const [isLoading, setIsLoading] = useState(true);
 

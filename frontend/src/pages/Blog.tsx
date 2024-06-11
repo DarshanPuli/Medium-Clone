@@ -8,7 +8,7 @@ import Skeleton from "../components/Skeleton"
 
 export default function Blog(){
     const {id} = useParams();
-    const{blog,isLoading}=useSpecificBlog({id});
+    const {blog,isLoading}:{blog:any,isLoading:boolean}=useSpecificBlog({id});
     if(isLoading){
         return <div className="flex justify-center items-center h-screen"><Skeleton></Skeleton></div>
     }
