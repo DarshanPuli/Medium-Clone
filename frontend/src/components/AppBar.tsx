@@ -1,7 +1,7 @@
 import logo from "../assets/logo.png";
 import publish from "../assets/publish.png";
 import { Avatar } from "./BlogCard";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function Appbar({ needPublish }: { needPublish: boolean }) {
   const navigate = useNavigate();
   return (

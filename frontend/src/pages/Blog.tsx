@@ -1,5 +1,3 @@
-import axios from "axios"
-import { useEffect } from "react"
 import { useSpecificBlog } from "../hooks"
 import { Avatar } from "../components/BlogCard";
 import { useParams } from "react-router-dom";

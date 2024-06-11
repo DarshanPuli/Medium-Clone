@@ -51,7 +51,6 @@ export default function Blogs() {
           {blog.map((b: BlogCardProps) => {
             return BlogCardNew({
               authorName: b.author.name,
-              content: b.content,
               publishedDate: b.publishedDate,
               title: b.title,
               id: b.id,

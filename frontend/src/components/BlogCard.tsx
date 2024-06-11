@@ -8,6 +8,13 @@ interface BlogCardProps{
     id:number
 }
 
+interface BlogCardNewProps{
+    authorName : string,
+    publishedDate : string,
+    title : string,
+    id:number
+}
+
 export default function BlogCard({authorName,publishedDate,title,content,id}:BlogCardProps){
     return (
         <Link to={`/blog/${id}`}>
@@ -25,7 +32,7 @@ export default function BlogCard({authorName,publishedDate,title,content,id}:Blo
     )
 }   
 
-export function BlogCardNew({authorName,publishedDate,title,content,id}:BlogCardProps){
+export function BlogCardNew({authorName,publishedDate,title,id}:BlogCardNewProps){
     return (
         <Link to={`/blog/${id}`}>
             <div className=" pl-2 mx-10 cursor-pointer">
