@@ -13,7 +13,7 @@ export function useSpecificBlog({id}:{id:string|undefined}){
           throw new Error("No token found");
         }
         const response = await axios.get(
-          `https://backend.pardy1166.workers.dev/api/v1/blog/blog/:${id}`,
+          `https://backend.pardy1166.workers.dev/api/v1/blog/blog/${id}`,
           {
             headers: {
               Authorization: localStorage.getItem("token"),

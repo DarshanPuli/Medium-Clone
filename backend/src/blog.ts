@@ -138,11 +138,14 @@ blogRouter.put("/blog", async (c) => {
         datasourceUrl : c.env.DATABASE_URL
     }).$extends(withAccelerate())
 
-    var id = await c.req.param('id');
+    var id = await c.req.param('id').substring(0);
+    console.log(Number(id));
+    console.log("hi");
+    console.log(id);
     try{
         const response = await prisma.blog.findFirst({
             where:{
-                id:Number(id[1])
+                id:Number(id)
             },
             select:{
                 id:true,
